@@ -1,0 +1,2 @@
+server:  port: 8082spring:  datasource:      url: jdbc:mysql://localhost:3306/microservices      username: root      password: Latur@123      driver-class-name: com.mysql.jdbc.Driver  jpa:    hibernate:      ddl-auto: update    show-sql: true        
+
