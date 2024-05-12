@@ -68,7 +68,49 @@ public class User {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
+	 public static Builder builder() {
+         return new Builder();
+     }
+	public static class Builder {
+        private String userId;
+        private String name;
+        private String email;
+        private String about;
+        private List<Rating> ratings;
+
+        // Private constructor
+        private Builder() {
+        }
+        // Setter methods for optional parameters
+        public Builder userId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder email(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public Builder about(String about) {
+            this.about = about;
+            return this;
+        }
+
+        public Builder ratings(List<Rating> ratings) {
+            this.ratings = ratings;
+            return this;
+        }
+
+        public User build() {
+            return new User(userId, name, email, about, ratings);
+        }
+	}
+
 
 }
